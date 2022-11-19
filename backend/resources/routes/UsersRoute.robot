@@ -1,51 +1,55 @@
 *Settings*
-Documentation           Users route
+Documentation       Users route
 
-
-*Keywords*
+*Keyword*
 POST User
+
     [Arguments]     ${payload}
 
     ${response}     POST
-    ...             ${API_USERS}/users
-    ...             json=${payload}
-    ...             expected_status=any
+    ...        ${API_USERS}/users       
+    ...        json=${payload}     
+    ...        expected_status=any
 
-    [return]  ${response}
+    [return]        ${response}
+
 
 DELETE User
+
     [Arguments]     ${token}
 
     ${headers}      Create Dictionary       Authorization=${token}
 
     ${response}     DELETE
-    ...             ${API_USERS}/users
-    ...             headers=${headers}
-    ...             expected_status=any
+    ...        ${API_USERS}/users       
+    ...        headers=${headers}    
+    ...        expected_status=any
 
-    [return]  ${response}
+    [return]        ${response}
 
 GET User
+
     [Arguments]     ${token}
 
     ${headers}      Create Dictionary       Authorization=${token}
 
     ${response}     GET
-    ...             ${API_USERS}/users
-    ...             headers=${headers}
-    ...             expected_status=any
+    ...        ${API_USERS}/users       
+    ...        headers=${headers}    
+    ...        expected_status=any
 
-    [return]  ${response}
+    [return]        ${response}
 
 PUT User
-    [Arguments]     ${token}        ${payload}
+
+    [Arguments]     ${token}    ${payload}
 
     ${headers}      Create Dictionary       Authorization=${token}
 
     ${response}     PUT
-    ...             ${API_USERS}/users
-    ...             json=${payload}
-    ...             headers=${headers}
+    ...             ${API_USERS}/users       
+    ...             json=${payload}  
+    ...             headers=${headers}   
     ...             expected_status=any
 
-    [return]  ${response}
+    [return]        ${response}

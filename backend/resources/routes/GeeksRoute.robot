@@ -1,29 +1,30 @@
 *Settings*
-Documentation           Geeks route
+Documentation       Geeks route
 
-
-*Keywords*
+*Keyword*
 POST Geek
-    [Arguments]     ${token}        ${payload}
+
+    [Arguments]     ${token}              ${payload}
 
     ${headers}      Create Dictionary       Authorization=${token}
-
+    
     ${response}     POST
-    ...             ${API_GEEKS}/geeks
+    ...             ${API_GEEKS}/geeks       
     ...             json=${payload}
-    ...             headers=${headers}
+    ...             headers=${headers}     
     ...             expected_status=any
 
-    [return]  ${response}
+    [return]        ${response}
 
 GET Geeks
+
     [Arguments]     ${token}
-
+    
     ${headers}      Create Dictionary       Authorization=${token}
-
+    
     ${response}     GET
-    ...             ${API_GEEKS}/geeks
-    ...             headers=${headers}
-    ...             expected_status=any
+    ...             ${API_GEEKS}/geeks       
+    ...             headers=${headers}     
+    ...             expected_status=any  #para validarmos o status code na mão, nos que valimos via codigo
 
-    [return]  ${response}
+    [return]        ${response}       
