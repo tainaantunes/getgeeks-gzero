@@ -2,7 +2,7 @@
 Documentation       Session route test suite
 
 
-Resource    ${EXECDIR}/Resources/Base.robot
+Resource    ${EXECDIR}/resources/Base.robot
 
 
 *Variables*
