@@ -18,7 +18,7 @@ Resource    Helpers.robot
 Resource    Services.robot
 
 *Variables*
-${BASE_URL}         https://getgeeks-papito.herokuapp.com
+${BASE_URL}         https://getgeeks-taina.herokuapp.com
 
 *Keywords*
 Start Session
